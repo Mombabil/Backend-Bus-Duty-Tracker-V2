@@ -74,8 +74,8 @@ async function startServer() {
 
     console.log("Connecté à MongoDB");
 
-    app.listen(3000, () => {
-      console.log("Serveur lancé sur http://localhost:3000");
+    app.listen(uri, () => {
+      console.log("Serveur lancé");
     });
   } catch (error) {
     console.error("Erreur de démarrage :", error);
