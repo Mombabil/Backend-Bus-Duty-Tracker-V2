@@ -74,8 +74,10 @@ async function startServer() {
 
     console.log("Connecté à MongoDB");
 
-    app.listen(uri, () => {
-      console.log("Serveur lancé");
+    const PORT = process.env.PORT || 3000;
+
+    app.listen(PORT, () => {
+      console.log(`Serveur lancé sur le port ${PORT}`);
     });
   } catch (error) {
     console.error("Erreur de démarrage :", error);
